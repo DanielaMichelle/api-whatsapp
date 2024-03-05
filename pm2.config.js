@@ -1,7 +1,7 @@
 module.exports = {
     apps: [
       {
-        name: "mi-aplicacion",
+        name: "api-whatsapp",
         script: "npm run dev",
         env: {
           NODE_ENV: "development",
