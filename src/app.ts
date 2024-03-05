@@ -11,14 +11,15 @@ const main = async () => {
         const body = req.body
         const message = body.message
         const mediaUrl = body.mediaUrl    
+        const phone = body.phone
 
-        await bot.sendMessage('51999355516', message, {})
+        await bot.sendMessage(phone, message, {})
 
-        await bot.sendMessage('51999355516', "", {
+        await bot.sendMessage(phone, "", {
             media: mediaUrl
         })
         
-        res.end('esto es del server de polka')
+        res.end('Respuesta desde la API de whatsapp')
     }))
 
     await createBot({
