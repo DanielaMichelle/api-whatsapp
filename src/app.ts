@@ -5,7 +5,7 @@ import { BaileysProvider, handleCtx } from "@bot-whatsapp/provider-baileys";
 const flowBienvenida = addKeyword('hola').addAnswer('Buenas bienvenido')
 const main = async () => {
     const provider = createProvider(BaileysProvider)
-    provider.initHttpServer(3001)
+    provider.initHttpServer(3003)
 
     provider.http?.server.post('/send-message', handleCtx(async (bot, req, res) => {
         const body = req.body
